@@ -45,9 +45,23 @@ const Index = () => {
               <h2 className="text-5xl md:text-6xl font-serif font-bold mb-6 leading-tight">
                 Сделаю вашу свадьбу <span className="text-primary">незабываемой</span>
               </h2>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-lg text-muted-foreground mb-4">
                 Авторский стиль проведения, индивидуальный подход к каждой паре. Более 200 счастливых пар доверили мне самый важный день в их жизни.
               </p>
+              <div className="grid grid-cols-3 gap-4 mb-8 p-4 bg-white/50 rounded-lg">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary mb-1">200+</div>
+                  <div className="text-sm text-muted-foreground">Свадеб проведено</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary mb-1">8 лет</div>
+                  <div className="text-sm text-muted-foreground">Опыта</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary mb-1">100%</div>
+                  <div className="text-sm text-muted-foreground">Счастливых пар</div>
+                </div>
+              </div>
               <div className="flex gap-4">
                 <Button size="lg" onClick={() => scrollToSection("services")} className="bg-primary hover:bg-primary/90 text-white">
                   Выбрать пакет
@@ -70,11 +84,32 @@ const Index = () => {
 
       <section id="about" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-serif font-bold mb-6">Обо мне</h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground mb-6">
               Профессиональный ведущий свадеб с 8-летним опытом. Моя миссия — создавать атмосферу, в которой каждая пара чувствует себя особенной.
             </p>
+            <div className="bg-gradient-to-r from-primary/5 to-secondary/5 p-6 rounded-xl text-left">
+              <h3 className="text-xl font-semibold mb-4 text-center">Почему выбирают меня:</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="flex items-start gap-3">
+                  <Icon name="CheckCircle2" className="text-primary mt-1 flex-shrink-0" size={20} />
+                  <p className="text-muted-foreground">Разработка уникального сценария под вашу историю любви и характер</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="CheckCircle2" className="text-primary mt-1 flex-shrink-0" size={20} />
+                  <p className="text-muted-foreground">Работаю без шаблонов — каждая свадьба не похожа на другую</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="CheckCircle2" className="text-primary mt-1 flex-shrink-0" size={20} />
+                  <p className="text-muted-foreground">Умею вовлечь даже самых застенчивых гостей в веселье</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="CheckCircle2" className="text-primary mt-1 flex-shrink-0" size={20} />
+                  <p className="text-muted-foreground">Координирую всех подрядчиков, чтобы вы могли расслабиться</p>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="animate-fade-in hover:shadow-lg transition-shadow">
@@ -83,9 +118,14 @@ const Index = () => {
                   <Icon name="Heart" className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-serif font-semibold mb-3 text-center">Индивидуальный подход</h3>
-                <p className="text-muted-foreground text-center">
-                  Разрабатываю уникальный сценарий для каждой пары с учётом их пожеланий и характера
+                <p className="text-muted-foreground text-center mb-3">
+                  Разрабатываю уникальный сценарий для каждой пары с учётом их пожеланий, характера и истории знакомства
                 </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Предварительные встречи</li>
+                  <li>• Учёт всех пожеланий</li>
+                  <li>• Персональные сюрпризы</li>
+                </ul>
               </CardContent>
             </Card>
             <Card className="animate-fade-in hover:shadow-lg transition-shadow" style={{ animationDelay: "0.1s" }}>
@@ -94,9 +134,14 @@ const Index = () => {
                   <Icon name="Sparkles" className="text-secondary" size={32} />
                 </div>
                 <h3 className="text-xl font-serif font-semibold mb-3 text-center">Авторский стиль</h3>
-                <p className="text-muted-foreground text-center">
+                <p className="text-muted-foreground text-center mb-3">
                   Сочетание классических традиций с современными трендами в проведении свадеб
                 </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Без пошлых конкурсов</li>
+                  <li>• Стильные активности</li>
+                  <li>• Актуальные форматы</li>
+                </ul>
               </CardContent>
             </Card>
             <Card className="animate-fade-in hover:shadow-lg transition-shadow" style={{ animationDelay: "0.2s" }}>
@@ -105,9 +150,14 @@ const Index = () => {
                   <Icon name="Award" className="text-primary" size={32} />
                 </div>
                 <h3 className="text-xl font-serif font-semibold mb-3 text-center">Опыт и профессионализм</h3>
-                <p className="text-muted-foreground text-center">
+                <p className="text-muted-foreground text-center mb-3">
                   Более 200 проведённых свадеб, множество благодарных отзывов и счастливых воспоминаний
                 </p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• 8 лет на рынке</li>
+                  <li>• Свадьбы от 20 до 500 гостей</li>
+                  <li>• Работа по всей России</li>
+                </ul>
               </CardContent>
             </Card>
           </div>
@@ -130,22 +180,34 @@ const Index = () => {
                   <div className="text-4xl font-bold text-primary mb-2">от 30 000₽</div>
                   <p className="text-muted-foreground">До 6 часов</p>
                 </div>
-                <ul className="space-y-3">
+                <ul className="space-y-2 text-sm">
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={20} />
-                    <span>Проведение свадебного банкета</span>
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Проведение свадебного банкета (до 6 часов)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={20} />
-                    <span>Базовые конкурсы и игры</span>
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>5-7 классических конкурсов и игр</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={20} />
-                    <span>Координация с площадкой</span>
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Знакомство гостей, тосты, речи</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={20} />
-                    <span>Одна предварительная встреча</span>
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Координация с площадкой и диджеем</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Одна предварительная встреча (1,5 часа)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Разработка базового сценария</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Связь по телефону 24/7 за неделю до свадьбы</span>
                   </li>
                 </ul>
                 <Button className="w-full mt-8 bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white" onClick={() => scrollToSection("contact")}>
@@ -164,26 +226,42 @@ const Index = () => {
                   <div className="text-4xl font-bold text-primary mb-2">от 50 000₽</div>
                   <p className="text-muted-foreground">До 8 часов</p>
                 </div>
-                <ul className="space-y-3">
+                <ul className="space-y-2 text-sm">
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={20} />
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
                     <span>Всё из базового пакета</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={20} />
-                    <span>Авторские конкурсы и активности</span>
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Проведение банкета до 8 часов</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={20} />
-                    <span>Индивидуальный сценарий</span>
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>10-12 авторских активностей и игр</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={20} />
-                    <span>Две встречи для обсуждения</span>
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Индивидуальный сценарий под вашу историю</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={20} />
-                    <span>Координация подрядчиков</span>
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Две встречи для подготовки (3-4 часа)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Координация всех подрядчиков</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Профессиональное оборудование (микрофон, колонки)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Репетиция первого танца (по желанию)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Подбор музыкального сопровождения</span>
                   </li>
                 </ul>
                 <Button className="w-full mt-8 bg-primary hover:bg-primary/90 text-white" onClick={() => scrollToSection("contact")}>
@@ -199,26 +277,46 @@ const Index = () => {
                   <div className="text-4xl font-bold text-primary mb-2">от 80 000₽</div>
                   <p className="text-muted-foreground">Весь день</p>
                 </div>
-                <ul className="space-y-3">
+                <ul className="space-y-2 text-sm">
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={20} />
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
                     <span>Всё из стандартного пакета</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={20} />
-                    <span>Проведение выездной регистрации</span>
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Проведение всего дня (без ограничений)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={20} />
-                    <span>Неограниченные встречи</span>
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Выездная регистрация + банкет</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={20} />
-                    <span>Полная координация дня</span>
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Неограниченное количество встреч</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={20} />
-                    <span>Эксклюзивные сюрпризы</span>
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Полная координация всего свадебного дня</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Эксклюзивные персонализированные сюрпризы</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Помощь в подготовке клятв и речей</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Создание таймлайна и плана дня</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Консультации по выбору площадки</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={18} />
+                    <span>Профессиональный реквизит для игр</span>
                   </li>
                 </ul>
                 <Button className="w-full mt-8 bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white" onClick={() => scrollToSection("contact")}>
@@ -373,7 +471,7 @@ const Index = () => {
                   За сколько времени нужно бронировать дату?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  Рекомендую бронировать дату минимум за 3-6 месяцев, особенно если планируете свадьбу в высокий сезон (май-сентябрь). Однако иногда могу принять заказ и с меньшим сроком.
+                  Рекомендую бронировать дату минимум за 3-6 месяцев, особенно если планируете свадьбу в высокий сезон (май-сентябрь). В этот период у меня может быть забронировано до 15-20 свадеб в месяц. Однако могу принять заказ и с меньшим сроком, если есть свободные даты. Для бронирования вносится предоплата 50%.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2" className="border rounded-lg px-6">
@@ -381,7 +479,7 @@ const Index = () => {
                   Можно ли изменить программу под наши пожелания?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  Конечно! Каждая свадьба уникальна, и я создаю индивидуальный сценарий под каждую пару. Мы встретимся, обсудим ваши предпочтения, и я адаптирую программу специально для вас.
+                  Конечно! Каждая свадьба уникальна, и я создаю индивидуальный сценарий под каждую пару. Мы встретимся, обсудим ваши предпочтения, характер, историю знакомства, и я адаптирую программу специально для вас. Можем убрать определённые конкурсы, добавить новые активности, изменить формат — всё под вас.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3" className="border rounded-lg px-6">
@@ -389,7 +487,7 @@ const Index = () => {
                   Что входит в стоимость пакета?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  В стоимость включены: проведение банкета по индивидуальному сценарию, конкурсы и активности, координация с площадкой и подрядчиками, предварительные встречи. Дополнительное оборудование оплачивается отдельно.
+                  В стоимость включены: проведение банкета по индивидуальному сценарию, все конкурсы и активности, координация с площадкой и подрядчиками, предварительные встречи, профессиональное оборудование (в Стандарт и Премиум), консультации по телефону. Дополнительно можно заказать: спецэффекты, артистов, дополнительное время.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4" className="border rounded-lg px-6">
@@ -397,7 +495,7 @@ const Index = () => {
                   Работаете ли вы в других городах?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  Да, я готов работать в других городах. В этом случае к стоимости добавляются расходы на дорогу и проживание, если требуется. Обсудим детали индивидуально.
+                  Да, я готов работать в других городах России. Уже проводил свадьбы в Москве, Санкт-Петербурге, Сочи, Казани и других городах. К стоимости добавляются транспортные расходы и проживание (если требуется). Обычно это +10 000-15 000₽ к выбранному пакету.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-5" className="border rounded-lg px-6">
@@ -405,7 +503,7 @@ const Index = () => {
                   Какая форма оплаты?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  Оплата производится в два этапа: 50% предоплата при бронировании даты и 50% за неделю до мероприятия. Принимаю наличные и безналичный расчёт.
+                  Оплата производится в два этапа: 50% предоплата при бронировании даты (закрепляет вашу дату за вами) и 50% за 7 дней до мероприятия. Принимаю наличные, перевод на карту и безналичный расчёт по договору (с чеком и актом).
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
